@@ -71,7 +71,7 @@ public class Battleship {
 		// TODO Auto-generated method stub
 		Battleship bs = new Battleship();
 		bs.readBoards("src/input.txt");
-		bs.setStrategy(new RandomStrategy());
+		bs.setStrategy(new HorizontalStrategy());
 		bs.runStrategy(bs.boards[0]);
 		System.out.println(bs.searchStrategy.getNumberOfCellsSearched());
 		System.out.println(bs.searchStrategy.getCarrierCoords());
