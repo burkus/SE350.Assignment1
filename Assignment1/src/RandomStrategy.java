@@ -26,8 +26,10 @@ public class RandomStrategy extends SearchStrategy {
 					submarineCoords.add(coords);
 				}
 			}
-			else continue;
 		}
 	}
-
+	
+	public String getName() {
+		return "Random Search";
+	}
 }

@@ -23,5 +23,8 @@ public class HorizontalStrategy extends SearchStrategy {
 			}
 		}
 	}
-
+	
+	public String getName() {
+		return "Horizontal Search";
+	}
 }

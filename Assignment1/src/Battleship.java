@@ -71,11 +71,24 @@ public class Battleship {
 		// TODO Auto-generated method stub
 		Battleship bs = new Battleship();
 		bs.readBoards("src/input.txt");
-		bs.setStrategy(new HorizontalStrategy());
+		
+		bs.setStrategy(new RandomStrategy());
 		bs.runStrategy(bs.boards[0]);
-		System.out.println(bs.searchStrategy.getNumberOfCellsSearched());
-		System.out.println(bs.searchStrategy.getCarrierCoords());
-		System.out.println(bs.searchStrategy.getSubmarineCoords());
+		System.out.println("Game " + 1);
+		System.out.println(bs.searchStrategy);
+		System.out.println();
+		
+		bs.setStrategy(new HorizontalStrategy());
+		bs.runStrategy(bs.boards[1]);
+		System.out.println("Game " + 2);
+		System.out.println(bs.searchStrategy);
+		System.out.println();
+		
+		bs.setStrategy(new StrategicStrategy());
+		bs.runStrategy(bs.boards[2]);
+		System.out.println("Game " + 3);
+		System.out.println(bs.searchStrategy);
+		System.out.println();
 	}
 
 }

@@ -36,4 +36,23 @@ public abstract class SearchStrategy {
 		return carrierCoords.contains(coords) ||
 				submarineCoords.contains(coords);
 	}
+	
+	public abstract String getName();
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(getName() + "\n");
+		sb.append("Carrier Coordinates: ");
+		sb.append(getCarrierCoords() + "\n");
+		sb.append("Submarine Coordindates: ");
+		sb.append(getSubmarineCoords() + "\n");
+		sb.append("Number of Cells Searched: " + getNumberOfCellsSearched());
+		return sb.toString();
+	}
+	
+	public void reset() {
+		numberOfCellsSearched = 0;
+		carrierCoords.clear();
+		submarineCoords.clear();
+	}
 }
